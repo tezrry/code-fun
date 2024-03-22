@@ -1,0 +1,26 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "test",
+            "displayName": "test",
+            "description": "使用编译器: C = /usr/bin/clang, CXX = /usr/bin/clang++",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_C_COMPILER": "/usr/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debug",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "test"
+        }
+    ]
+}
