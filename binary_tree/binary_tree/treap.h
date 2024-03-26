@@ -5,20 +5,22 @@
 namespace binary_tree {
 
 template<class T>
+class TreapNode: public Node<T>
+{
+public:
+    TreapNode(const T& value, int priority):Node<T>(value),priority_(priority) {}
+private:
+    int priority_;
+};
+
+template<class T>
 class Treap
 {
 public:
     int Priority() {return 0;}
 
 private:
-    template<class K>
-    class TreapNode: public Node<K>
-    {
-    public:
-        TreapNode(const K &value, int priority):Node<K>(value),_priority(priority) {}
-    private:
-        int _priority;
-    };
+    
 
     TreapNode<T> *_root;
 };
