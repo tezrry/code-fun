@@ -1,7 +1,6 @@
 #pragma once
 
 #include "binary_tree/tree.h"
-
 namespace binary_tree {
 
 template<class T>
